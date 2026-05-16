@@ -55,7 +55,7 @@ def test_create_user(client, username, age, expected_status):
 
     assert response.status_code == expected_status
 
-    if expected_status == 200:
+    if expected_status == 201:
         assert response.json()["username"] == username
         assert response.json()["age"] == age
 
